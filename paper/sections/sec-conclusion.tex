@@ -1,0 +1,36 @@
+% !TEX root = ../neurosciences-barrels.tex
+
+\section*{Discussion}
+
+We have designed a comprehensive pipeline for the reconstruction of the 2-D barrel map from histological sections. This tool enables a fast reconstruction of a precise barrel map, thus saving a significant amount of time for the experimentalist. 
+%
+Indeed, most of the studies based on optical imaging which required a post-hoc anatomo-functional mapping of the barrel cortex relied on manual reconstruction and alignment of the barrel map with the functional images~\cite{Kleinfeld1996,Takashima2001,ferezou_2006,Kerr2007,Tsytsarev2010,Lustig2013,Harris2013}. 
+Other studies~\cite{Berwick2004,Berwick2008,Devonshire2010} used a method based on a warping algorithm described by~\cite{Zheng2010}. However, the manual detection of the fiducial markers required with this approach remains time-consuming in comparison to the automatic detection of blood vessel cross sections proposed here.
+
+In a recent article, Guy and collaborators~\cite{Guy2014} used a warping algorithm in order to align the layer IV barrel map, reconstructed manually from histological slices of flattened cortex, with the in vivo functional images using sets of fiducial points. Although the algorithm is not described in detail and probably involves manual selection of the fiducial points, it might be an interesting complement to our approach when working with flattened barrel cortex slices, since it allows a compensation for the curvature of the brain and distortion of the tissue.
+%
+Finally, instead of using the superficial blood vessels as anatomical landmarks to align the barrel map on the functional images, an alternative approach is to use the images of early cortical responses to single whisker deflections as landmarks~\cite{Wallace2008,Wang2012,Yang2013}.
+%
+Using such a method as a standard requires the acquisition of several additional single whisker responses, which might be difficult to implement for instance when working with awake head fixed animals.
+Note that the tool we propose here to reconstruct the barrel map is valuable whatever solution is chosen in the end to realign the barrel map with the functional images.
+
+
+On the methodological and mathematical sides, we mainly re-use a set of already existing tools (cross-correlation, ICP and gradient fusion). Our main contribution is to put them together in a coherent processing pipeline. A result of independent interest, that seems to be new, is to show how a family of robust ICP algorithms can be recasted as majorization-minimization algorithms. This in turn allows us to analyze the convergence of these methods.
+
+Obviously the efficacy of the proposed anatomo-functional mapping tool depends upon the quality of the histological slices. Although the preparation of these slices relies on standard protocols which often belong to the daily routines of neurophysiology laboratories, two aspects are essential for the accuracy of the outcome: the quality of the perfusion, and the right thickness of the first (most superficial) slice. Indeed, on the one hand blood vessels have to appear as white circular or elliptical spots on the images to allow the proper registration of consecutive slices and, on the other hand, the superficial blood vessels should be intact to allow the final overlay of the obtained barrel map with the in vivo recordings. 
+%
+When cutting the brain, it is therefore important to set the zero position of the blade with care to ensure a 100~$\mu$m thickness to the first slice and thus preserve the integrity of the superficial blood vessels.
+%
+Finally, although one could deplore that this overlay is a crucial step of the analysis that remains to be achieved manually, we propose here a solution that automatises the most time-consuming phases of the overall process and thus represents a substantial gain in time and precision.
+%
+Although its use has been demonstrated successfully for VSDI of the adult mouse barrel cortex, it could be expanded to other experimental model species or to the developing brain. Furthermore, the histological section registration method described here might be helpful to reconstruct any tissue in which a majority of blood vessels are orthogonal to the cutting plane of the slices.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Acknowledgment}
+
+We thank G\'erard Sadoc for technical expertise, and Aur\'elie Daret for her exprimental assistance.
+%
+This work was supported by Centre National de la Recherche Scientifique (France), the European Research Council (ERC project SIGMA-Vision), the European Union Seventh Framework Programme BrainScaleS (FP7-ICT-2009-6, N 269921), the Agence Nationale pour la Recherche (SensoryProcessing, Transtact).

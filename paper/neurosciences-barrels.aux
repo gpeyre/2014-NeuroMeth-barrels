@@ -1,0 +1,149 @@
+\relax 
+\citation{WelkerQuantitative,MeyerCellular,egger_2012}
+\citation{Woosley-VDLoos}
+\citation{Land-Simons}
+\Newlabel{ceremade}{a}
+\Newlabel{unic}{b}
+\Newlabel{contrib}{c}
+\Newlabel{newAdress}{1}
+\Newlabel{cor}{2}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}}
+\citation{GlockerAR,SotirasDP13}
+\citation{ourselin_2001,JuHisto}
+\citation{ourselin_2001}
+\citation{JuHisto}
+\citation{egger_2012}
+\citation{DercksenAutomatic}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces  \textbf  {Cytochrome oxidase staining of tangential sections from the mouse primary somatosensory cortex reveals the structural organization of layer 4 barrels that mirrors the arrangement of the vibrissae on the snout.}  \textbf  {A.} Following the registration of tangential histological slices and the reconstruction of the barrel map, one can see that the spatial organization of the layer 4 barrels matches the layout of the vibrissae on the snout of the animal (\textbf  {B}). \textbf  {C.} Drawing of a coronal section of the left hemisphere of the mouse brain illustrating the position of layer 4 barrels within the primary somatosensory area of the cortex. After in vivo imaging of barrel cortex activity, sections are cut tangentially to reconstruct the layer 4 barrel map (cutting plane indicated by the red line). \textbf  {D.} A series of tangential histological slices stained for cytochrome oxidase. On the first slice one can see superficial blood vessels. On the other slices, one can see white circular to elliptic spots that correspond to sections of plunging blood vessels. Depending on the exact axis of the cut, barrels can be spread over several slices. \relax }}{2}}
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{somatotopy}{{1}{2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.1}Registration of histological slices}{2}}
+\newlabel{sec-previous-works}{{1.1}{2}}
+\citation{besl_1992}
+\citation{chetverikov_2005,nishino_2002,stewart_2002,kaneko_2003,ma_1999}
+\citation{perez_2003,raskar_2004}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces  \textbf  {Alignment of the barrel map with VSDI data using the superficial blood vessels as blueprints.}   \textbf  {A.} Barrel map reconstructed from the histological slices shown in figure 1D, using our anatomo-functional mapping method. \textbf  {B.} Superimposition of the registered histological slices, allowing the delineation of the superficial blood vessels (in blue). \textbf  {C.} The superficial blood vessels also appear in vivo on the fluorescent images taken during the VSDI session. The VSDI data can therefore be aligned with the underlying structural map of the barrel cortex using the blood vessels as anatomical landmarks. On the right, the cortical activity is shown imaged at 10ms following a single C2 whisker deflection with the voltage sensitive dye RH1691 under urethane anesthesia. The barrels outlined from the reconstruction in A are superimposed on the image as white lines. \relax }}{3}}
+\newlabel{fig-alignement-superposition}{{2}{3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2}Fusion of histological slices}{3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.3}Contributions}{3}}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Material and methods}{3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Overview of the proposed framework}{3}}
+\newlabel{sec-overview}{{2.1}{3}}
+\@writefile{loi}{\contentsline {listing}{\numberline {1}{\ignorespaces   Notations used in the paper. \relax }}{3}}
+\newlabel{table-notations}{{1}{3}}
+\@writefile{loi}{\contentsline {listing}{\numberline {2}{\ignorespaces  Parameters used in the paper.\relax }}{4}}
+\newlabel{table-parameters}{{2}{4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Step 1: Pairwise Registration of Histological Sections}{4}}
+\newlabel{sec-registration}{{2.2}{4}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.1}Pre-processing}{4}}
+\newlabel{sec-preprocessing}{{2.2.1}{4}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.2}Vessel Detection}{4}}
+\newlabel{sec-vessel-detec}{{2.2.2}{4}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.3}Slice Registration by Robust ICP}{4}}
+\newlabel{sec-icp-alignement}{{2.2.3}{4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces  \textbf  {Registration of histological slices and subsequent barrel map reconstruction. }  \textbf  {A.} Snapshots extracted from the GUI illustrating the results of the automated detection of blood vessel cross sections on consecutive histological slices (yellow filled circles and red open circles, respectively -- $S_3$ to $S_6$ previously shown in Figure\nobreakspace  {}1\hbox {}D). The result of the registration obtained by robust ICP applied on the detected blood vessels is illustrated on the right for each pair of slices. Note that the user can delimit manually a region of interest (black dashed lines) in order to restrict blood vessel detection to the barrel field region. \textbf  {B.} Images from the same experiment obtained by using our automated barrel map reconstruction tool before (left) or after (right) post-processing steps. \relax }}{4}}
+\newlabel{fig-algo-sample}{{3}{4}}
+\@writefile{toc}{\contentsline {paragraph}{Variational registration}{4}}
+\citation{besl_1992}
+\citation{perez_2003,raskar_2004}
+\citation{ferezou_2006}
+\newlabel{eq-icp-functional}{{1}{5}}
+\newlabel{eq-weighting-robust}{{2}{5}}
+\@writefile{toc}{\contentsline {paragraph}{ICP iterations}{5}}
+\newlabel{eq-icp-step1}{{3}{5}}
+\newlabel{eq-icp-step2}{{4}{5}}
+\@writefile{toc}{\contentsline {paragraph}{Initialization}{5}}
+\@writefile{toc}{\contentsline {paragraph}{Registered images}{5}}
+\newlabel{eq-def-registered-data}{{5}{5}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Step 2: reconstruction of the barrel image}{5}}
+\newlabel{sec-fusion}{{2.3}{5}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.3.1}Pre-processing}{5}}
+\newlabel{sec-inpaint-denoise}{{2.3.1}{5}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.3.2}Slice gradient fusion}{5}}
+\newlabel{sec-grad-fusion}{{2.3.2}{5}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.3.3}Drift removal}{5}}
+\newlabel{sec-drift-removal}{{2.3.3}{5}}
+\newlabel{eq-drift-removal}{{6}{5}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4}In vivo VSD imaging and DiI staining}{5}}
+\@writefile{toc}{\contentsline {paragraph}{Animal preparation and VSDI setup}{5}}
+\citation{Jacob10}
+\citation{DiCarlo96}
+\citation{Jacob10}
+\citation{ferezou_2006}
+\citation{Kleinfeld1996,Takashima2001,ferezou_2006,Kerr2007,Tsytsarev2010,Lustig2013,Harris2013}
+\citation{Berwick2004,Berwick2008,Devonshire2010}
+\citation{Zheng2010}
+\@writefile{toc}{\contentsline {paragraph}{Whisker stimulation}{6}}
+\@writefile{toc}{\contentsline {paragraph}{Image analysis}{6}}
+\@writefile{toc}{\contentsline {paragraph}{DiI in vivo staining}{6}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.5}Histological Procedures}{6}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Results}{6}}
+\newlabel{sec-results}{{3}{6}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Histological Validation of the Registration Method}{6}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Assessment of the barrel map reconstruction tool using VSDI of cortical responses to individual whisker deflections}{6}}
+\citation{Guy2014}
+\citation{Wallace2008,Wang2012,Yang2013}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces  \textbf  {Histological validation of the registration method.}   \textbf  {A.} Drawing of a coronal section of the left hemisphere of the mouse brain illustrating the penetration sites of DiI-coated electrodes. \textbf  {B.} The DiI fluorescent staining (middle image) does not interfere with the process of blood vessel detection used on bright field images (left), as shown by the absence of detected spots on the DiI stain (right), arrowheads indicate the DiI stained spots corresponding to electrode tracks. \textbf  {C.} Following the registration of the slices 2 to 7, we observe a good overlap of DiI spots, indicative of the accuracy of our registration method. \relax }}{7}}
+\newlabel{fig-histo-validation}{{4}{7}}
+\citation{BouazizTP13}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces  \textbf  {Functional validation of the registration method.} \textbf  {A.} Cortical responses evoked by individual deflections of the 24 principal vibrissae in a urethane anesthetized mouse were imaged using the VSD RH1691. For each whisker, the early cortical response is shown (data averaged from 4 to 18 ms post stimulation time and 40 trials, Gaussian filtered ($5 \times 5$ pxls), and normalized), together with the aligned barrel map obtained from our reconstruction method (white lines). \textbf  {B.} The barrel map was extracted from the fused barrel field image (left) and overlaid on the VSD reference image (right) together with the early response locations (90\% contours of the early responses (in A) are shown in colors) obtained for each whisker. \textbf  {C.} The distance between the centroid of the barrel area and the centroid of the early cortical response (as illustrated in B) was computed, column by column, for the experiment illustrated in A-B (left), and in average for all the control experiments ($n = 4)$. \relax }}{8}}
+\newlabel{fig-func-validation}{{5}{8}}
+\@writefile{toc}{\contentsline {section}{\numberline {Appendix A}Feature Detection with Normalized Cross-Cor\discretionary {-}{}{}re\discretionary {-}{}{}la\discretionary {-}{}{}tion}{8}}
+\newlabel{app-crosscorrel}{{Appendix A}{8}}
+\newlabel{eq-ncc-def}{{A.1}{8}}
+\@writefile{toc}{\contentsline {section}{\numberline {Appendix B}Robust Itertive Closet Point}{8}}
+\newlabel{app-icp}{{Appendix B}{8}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {Appendix B.1}ICP Step 1 with Majorize-Minimize (MM) Iterations}{8}}
+\newlabel{sec-icp-mm}{{Appendix B.1}{8}}
+\newlabel{eq-func-icp}{{B.1}{8}}
+\newlabel{eq-mm-iter}{{B.2}{8}}
+\citation{maurer_1996}
+\newlabel{eq-majorizing-func}{{B.3}{9}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {Appendix B.2}ICP Step 2 with Weighted Quadratic Loss}{9}}
+\newlabel{sec-icp-step2-details}{{Appendix B.2}{9}}
+\@writefile{toc}{\contentsline {section}{\numberline {Appendix C}Inpainting}{9}}
+\newlabel{app-inpainting}{{Appendix C}{9}}
+\newlabel{eq-inpaint}{{C.1}{9}}
+\@writefile{toc}{\contentsline {section}{\numberline {Appendix D}Gradient Domain Image Fusion}{9}}
+\newlabel{app-fusion}{{Appendix D}{9}}
+\bibstyle{elsarticle-num}
+\bibdata{biblio}
+\bibcite{WelkerQuantitative}{{1}{}{{}}{{}}}
+\bibcite{MeyerCellular}{{2}{}{{}}{{}}}
+\bibcite{egger_2012}{{3}{}{{}}{{}}}
+\bibcite{Woosley-VDLoos}{{4}{}{{}}{{}}}
+\bibcite{Land-Simons}{{5}{}{{}}{{}}}
+\bibcite{GlockerAR}{{6}{}{{}}{{}}}
+\bibcite{SotirasDP13}{{7}{}{{}}{{}}}
+\bibcite{ourselin_2001}{{8}{}{{}}{{}}}
+\bibcite{JuHisto}{{9}{}{{}}{{}}}
+\bibcite{DercksenAutomatic}{{10}{}{{}}{{}}}
+\bibcite{besl_1992}{{11}{}{{}}{{}}}
+\bibcite{chetverikov_2005}{{12}{}{{}}{{}}}
+\bibcite{nishino_2002}{{13}{}{{}}{{}}}
+\bibcite{stewart_2002}{{14}{}{{}}{{}}}
+\bibcite{kaneko_2003}{{15}{}{{}}{{}}}
+\bibcite{ma_1999}{{16}{}{{}}{{}}}
+\bibcite{perez_2003}{{17}{}{{}}{{}}}
+\bibcite{raskar_2004}{{18}{}{{}}{{}}}
+\bibcite{ferezou_2006}{{19}{}{{}}{{}}}
+\bibcite{Jacob10}{{20}{}{{}}{{}}}
+\bibcite{DiCarlo96}{{21}{}{{}}{{}}}
+\bibcite{Kleinfeld1996}{{22}{}{{}}{{}}}
+\bibcite{Takashima2001}{{23}{}{{}}{{}}}
+\bibcite{Kerr2007}{{24}{}{{}}{{}}}
+\bibcite{Tsytsarev2010}{{25}{}{{}}{{}}}
+\bibcite{Lustig2013}{{26}{}{{}}{{}}}
+\bibcite{Harris2013}{{27}{}{{}}{{}}}
+\bibcite{Berwick2004}{{28}{}{{}}{{}}}
+\bibcite{Berwick2008}{{29}{}{{}}{{}}}
+\bibcite{Devonshire2010}{{30}{}{{}}{{}}}
+\bibcite{Zheng2010}{{31}{}{{}}{{}}}
+\bibcite{Guy2014}{{32}{}{{}}{{}}}
+\bibcite{Wallace2008}{{33}{}{{}}{{}}}
+\bibcite{Wang2012}{{34}{}{{}}{{}}}
+\bibcite{Yang2013}{{35}{}{{}}{{}}}
+\bibcite{BouazizTP13}{{36}{}{{}}{{}}}
+\bibcite{maurer_1996}{{37}{}{{}}{{}}}
+\newlabel{eq-poisson}{{D.1}{10}}
+\providecommand\NAT@force@numbers{}\NAT@force@numbers

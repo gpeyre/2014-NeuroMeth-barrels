@@ -1,0 +1,25 @@
+% !TEX root = ../neurosciences-barrels.tex
+
+\section{Gradient Domain Image Fusion}
+\label{app-fusion}
+
+We consider a set $\{\bar S_m\}_{m \in \Relevant}$ of input images to fuse. 
+At each pixel $x$, we denote the index of largest gradient magnitude as
+\eq{
+	m(x) = \uargmin{ m \in \Relevant } \norm{ \nabla \bar S_m(x) }
+}
+where $\nabla$ is a finite differences approximation of the gradient operator. 
+
+We design a fused vector field as
+\eq{
+	u(x) = \nabla \bar S_{m(x)}(x) \in \RR^2.
+}
+Since the vector field $u$ is obtained by gluing together gradients from several different images, it is in general not anymore the gradient of an image. We thus reconstruct a valid fused image $S$ using the minimal norm pseudo-inverse, i.e. by computing an image $S$ whose gradient is as close as possible to $u$
+\eq{
+	\umin{S}  \norm{ u - \nabla S }^2 = \sum_x  \norm{ u(x) - \nabla S(x) }^2 .
+}
+The solution is obtained by solving a Poisson equation
+\eql{\label{eq-poisson}
+	\Delta S = \diverg( u )
+}
+with adequate boundary conditions, where $\Delta = \diverg \circ \nabla$ is the Laplacian operator and $\diverg = -\nabla^*$ is the divergence. When using periodic boundary conditions (which can be used in our case), one solves~\eqref{eq-poisson} in $O(N \log(N))$ operations (where $N$ is the number of pixels) using an FFT Poisson solver.

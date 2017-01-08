@@ -1,0 +1,113 @@
+% \documentclass[preprint,12pt]{elsarticle}
+%\documentclass[final,1p,times,twocolumn]{elsarticle}
+\documentclass[final,5p,times,twocolumn]{elsarticle}
+
+\usepackage{mystyle}
+\usepackage{color}
+
+
+
+\newcommand{\missing}[1]{MISSING}
+\newcommand{\todo}[1]{\noindent \textbf{\color{red} TODO : \textit{#1} }}
+
+
+
+
+% Normalized Cross Correlation
+\DeclareMathOperator{\NCC}{NCC}
+% Mask for inpainting
+\newcommand{\Mask}{\Phi}
+% Relevan images containing barrels
+\newcommand{\Relevant}{\Mm}
+
+\journal{Journal of Neuroscience Methods}
+
+
+\begin{document}
+
+%%%%
+\begin{frontmatter}
+
+\title{An automated workflow for the anatomo-functional mapping of the barrel cortex}
+
+
+% \author{Lorraine Perronnet, Eugenia Vilarchao, Daniel Shulz, Gabriel Peyr{\'e} and Isabelle Ferezou}
+
+\author[ceremade,unic,contrib]{Lorraine Perronnet\corref{newAdress}}
+%\ead{lorraine.perronnet@inria.fr}
+
+\author[unic,contrib]{Mar\'ia Eugenia Vilarchao}
+%\ead{eugenia.vilarchao@unic.cnrs-gif.fr}
+
+
+\author[unic]{Guillaume Hucher}
+%\ead{guillaume.hucher@unic.cnrs-gif.fr}
+
+\author[unic]{Daniel E. Shulz}
+%\ead{shulz@unic.cnrs-gif.fr}
+%\ead[url]{http://www.unic.cnrs-gif.fr/people/Daniel_Shulz/}
+
+\author[ceremade]{Gabriel Peyr{\'e}}
+%\ead{gabriel.peyre@ceremade.dauphine.fr}
+%\ead[url]{https://www.ceremade.dauphine.fr/~peyre/}
+
+\author[unic]{Isabelle Ferezou\corref{cor}}
+%\ead{ferezou@unic.cnrs-gif.fr}
+%\ead[url]{http://www.unic.cnrs-gif.fr/people/Isabelle_Ferezou/}
+
+
+\cortext[newAdress]{
+Present address: VISAGES, INRIA, INSERM U746, Universit\'e de Rennes 1, CNRS UMR6074, 
+IRISA, campus de Beaulieu F-35042 Rennes, France}
+
+\cortext[cor]{Corresponding author:
+Isabelle Ferezou, 
+\url{isabelle.ferezou@unic.cnrs-gif.fr}, 
+Tel: +33 (0) 1 69 82 34 02, 
+Fax: +33 (0) 1 69 82 34 27, 
+Unit\'e de Neurosciences Information et Complexit\'e (UNIC), 
+CNRS FRE 3693, 1 Avenue de la Terrasse, Bât. 32/33, 
+91198 Gif-sur-Yvette, France.}
+
+
+% \fntext[fn1]{This is the specimen author footnote.}
+
+%\address[visages]{% 
+%VISAGES, INRIA, INSERM U746, Universit\'e de Rennes 1, CNRS UMR6074.
+% IRISA, campus de Beaulieu F-35042 Rennes, France
+%}
+
+\address[ceremade]{CNRS and Ceremade, Universit\'e Paris-Dauphine, 
+Place du Mar\'echal De Lattre De Tassigny, 75775, Paris Cedex 16, France.}
+
+\address[unic]{Unit\'e de Neurosciences, Information et Complexit\'e, CNRS FRE 3693, 
+91198 Gif-sur-Yvette, France}
+
+\address[contrib]{These authors contributed equally to the work.}
+
+\input{sections/sec-abstract}
+
+\end{frontmatter}
+%%%%%
+
+
+\input{sections/sec-intro}
+\input{sections/sec-material-methods}
+\input{sections/sec-results}
+\input{sections/sec-conclusion}
+\appendix
+% \input{sections/app-segmentation}
+\input{sections/app-crosscorrel}
+\input{sections/app-icp}
+\input{sections/app-inpainting}
+\input{sections/app-fusion}
+
+
+
+%%%
+\bibliographystyle{elsarticle-num}
+\bibliography{biblio}
+
+
+
+\end{document}

@@ -1,0 +1,46 @@
+This is BibTeX, Version 0.99d (TeX Live 2012)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: neurosciences-barrels.aux
+The style file: elsarticle-num.bst
+Database file #1: biblio.bib
+You've used 37 entries,
+            2937 wiz_defined-function locations,
+            921 strings with 12679 characters,
+and the built_in function-call counts, 12372 in all, are:
+= -- 1162
+> -- 502
+< -- 4
++ -- 192
+- -- 155
+* -- 990
+:= -- 1736
+add.period$ -- 37
+call.type$ -- 37
+change.case$ -- 37
+chr.to.int$ -- 0
+cite$ -- 37
+duplicate$ -- 338
+empty$ -- 1278
+format.name$ -- 191
+if$ -- 3077
+int.to.chr$ -- 0
+int.to.str$ -- 37
+missing$ -- 37
+newline$ -- 119
+num.names$ -- 37
+pop$ -- 210
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 695
+stack$ -- 0
+substring$ -- 946
+swap$ -- 64
+text.length$ -- 4
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 105
+width$ -- 39
+write$ -- 305

@@ -1,0 +1,101 @@
+% !TEX root = ../neurosciences-barrels.tex
+
+\section{Robust Itertive Closet Point}
+\label{app-icp}
+
+%%%
+\subsection{ICP Step 1 with Majorize-Minimize (MM) Iterations}
+\label{sec-icp-mm}
+
+We give here the details of an iterative algorithm to compute a local minimizer (in fact a stationary point) of~\eqref{eq-icp-step1}, which reads
+\eql{\label{eq-func-icp}
+	\umin{T} \Ee(T) = \sum_{i \in I} \rho( \norm{ T(x_i) - z_i } ).
+}
+This method is similar to re-weighting $\ell^2$ methods often used for robust ICP (see for instance~\cite{BouazizTP13}), but we integrate it into a Majorize-Minimize framework, which ensures its convergence. 
+
+\newcommand{\iter}[1]{ {#1}^{(\ell)} }
+\newcommand{\iiter}[1]{ {#1}^{(\ell+1)} }
+
+Starting from an initial transform $R^{(0)}$, we compute the iterations as
+\eql{\label{eq-mm-iter}
+	\iiter{T} \in \uargmin{T} \tilde\Ee( T,\iter{T} ) 
+}
+where $\tilde\Ee$ is a so-called surrogate function, which should satisfy
+\begin{itemize}
+	\item[($H_1$)] $\tilde\Ee(T, T') - \Ee(T)$ is a smooth function of $T$ (of class $C^1$)~;
+	\item[($H_2$)] for all $(T,T')$, $\tilde\Ee(T, T') \geq \Ee(T)$~;
+	\item[($H_3$)] for all $T$, $\tilde\Ee(T, T) = \Ee(T)$.
+\end{itemize}
+Under these conditions, it can be shown that the iterations enjoy some good convergence properties. The sequence $\Ee(\iter{T})$ is decaying and converges to some value $\Ee^\star$. If $\Ee$ is smooth (which is the case here), $\norm{\nabla \Ee(\iter{T})} \rightarrow 0$. Since in our case, the energy $\Ee$ is coercive, the sequence $\iter{T}$ is bounded, and all its cluster points $T^\star$ are stationary (i.e. $\nabla \Ee(T^\star)=0$) with same energy $\Ee(T^\star) = \Ee^\star$.
+
+The main difficulty in general is to devise a ``good'' surrogate function $\tilde\Ee$, i.e. such that one can compute the iteration~\eqref{eq-mm-iter} in closed form. The following proposition shows that one can actually design such a surrogate function using a quadratic loss. 
+
+\begin{prop}
+	If $\rho$ is $C^1(\RR)$ and $w(r) = \frac{\rho'(r)}{2 r}$ is decreasing, there exists 
+	a constant $C(T')$ independent of $T$ so that the functional
+	\eql{\label{eq-majorizing-func}
+		\tilde\Ee(T,T') = C(T') + \sum_{i \in I} w_i \norm{ T(x_i) - z_i }^2
+	}
+	\eq{
+		\qwhereq w_i = w( \norm{ T'(x_i) - z_i } )
+	}
+	is a majorizing functional for~\eqref{eq-func-icp} and thus satisfies properties $(H_1,H_2,H_3)$. 
+\end{prop}
+
+\begin{proof}
+	We rewrite $\tilde\Ee$ as
+	\eq{
+		\tilde\Ee(T,T') = \sum_{i \in I} \tilde \rho( \norm{ T(x_i) - z_i }, \norm{ T'(x_i) - z_i } ), 
+	}
+	where we defined 
+	\eq{
+		\tilde \rho( r,r' ) =  c(r') +  w(r') r^2
+		\qwhereq
+		c(r') = \rho(r') - \frac{\rho'(r')}{2}r'.
+	}
+	Thanks to the separability $\tilde\Ee$ (it is a summation over $i$ of functions involving independent variables) and the change of variables $r = \norm{ T(x_i) - z_i }$, it thus suffices to prove that $\tilde\rho$ is a surrogate functional for $\rho$ on $\RR^+$.
+	%
+	Hypothesis $(H_1)$ holds because $\rho$ is $C^1$, and one verifies that $\tilde \rho( r',r' ) = \rho(r')$ so that $(H_3)$ holds.
+	%
+	For any $r' \geq 0$, we consider 
+	\eq{
+		h(r) = \rho(r,r')-\rho(r) = \rho(r)-\rho(r') + \frac{\rho'(r')}{2r'} r^2 - \frac{\rho'(r')}{2}r'.
+	}
+	It satisfies $h(r')=h'(r')=0$ and $h'(r) = 2r(w(r') - w(r))$.
+	Since $w$ is decaying, $r'$ is the only point where $h'$ is vanishing on $\RR^+$. This implies that $h \geq 0$, hence $(H_2)$.
+\end{proof}
+
+The hypothesis that $w$ is decreasing should be interpreted as the condition that $\rho$ should penalize less than a quadratic loss, which makes sense for a robust penalization. Note that the loss~\eqref{eq-weighting-robust} that we use in our method satisfies this condition, and that the weighting function satisfies
+\eq{
+	w(r) = \frac{1}{\epsilon^2 + r^2}.
+}
+
+%%%
+\subsection{ICP Step 2 with Weighted Quadratic Loss}
+\label{sec-icp-step2-details}
+
+We consider the problem of solving
+\eq{
+	\umin{T}  \sum_{i \in I} w_i \norm{ T(x_i) - z_i }^2
+	\qwhereq
+	T(x) = R(x) + t
+}
+where $R$ is a rotation and $t \in \RR^2$. 
+This minimization appears in the MM iteration~\eqref{eq-mm-iter} when using the majorizing function~\eqref{eq-majorizing-func}. This problem has a closed form solution, as detailed for instance in~\cite{maurer_1996}. For the sake of completeness, we recall the steps of the method. One first centers the points, for $i \in I$
+\eq{
+	\tilde x_i = x_i - \frac{ \sum_{k \in I} w_k x_k }{ \sum_{k \in I} w_k }
+	\qandq
+	\tilde z_i = z_i - \frac{ \sum_{k \in I} w_k z_k }{ \sum_{k \in I} w_k }.
+}
+The optimal rotation is obtained as $R = V U^T$ where $(U,V)$ are the eigenvectors of the correlation matrix
+\eql{
+	\sum_{i \in I} w_i \tilde{x_i} \tilde{y_i}^T = U\Lambda V^T
+}
+(here $\Lambda$ is the diagonal matrix of eigenvalues). 
+The optimal translation is then computed as 
+\eq{
+	t = 
+	\frac{\sum_{i \in I} w_i ( \tilde z_i - R\tilde x_i ) }{ \sum_{i \in I} w_i }.
+} 
+
+

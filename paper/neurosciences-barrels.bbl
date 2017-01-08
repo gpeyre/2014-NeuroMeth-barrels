@@ -1,0 +1,195 @@
+\begin{thebibliography}{10}
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+\expandafter\ifx\csname href\endcsname\relax
+  \def\href#1#2{#2} \def\path#1{#1}\fi
+
+\bibitem{WelkerQuantitative}
+E.~Welker, H.~{Van der Loos}, Quantitative correlation between barrel-field
+  size and the sensory innervation of the whiskerpad: a comparative study in
+  six strains of mice bred for different patterns of mystacial vibrissae, J.
+  Neurosci. 6~(11) (1986) 3355--3373.
+
+\bibitem{MeyerCellular}
+H.~Meyer, R.~Egger, J.~Guest, R.~Foerster, S.~Reissl, M.~Oberlaender, Cellular
+  organization of cortical barrel columns is whisker-specific, Proc. Natl.
+  Acad. Sci. U.S.A. 110~(47) (2013) 19113--19118.
+
+\bibitem{egger_2012}
+R.~Egger, R.~T. Narayanan, M.~Helmstaedter, C.~P.~J. {de Kock}, M.~Oberlaender,
+  {3D} reconstruction and standardization of the rat vibrissal cortex for
+  precise registration of single neuron morphology, PLoS Comput Biol 8~(12).
+
+\bibitem{Woosley-VDLoos}
+T.~Woosley, H.~V.~D. Loos, The structural organization of layer {IV} in the
+  somatosensory region {(SI)} of mouse cerebral cortex: The description of a
+  cortical field composed of discrete cytoarchitectonic units, Brain Research
+  17~(2) (1970) 205--238.
+
+\bibitem{Land-Simons}
+P.~Land, D.~Simons, Cytochrome oxidase staining in the rat smi barrel cortex,
+  J. Comp. Neurol. 238~(2) (1985) 225--235.
+
+\bibitem{GlockerAR}
+B.~Glocker, A.~Sotiras, N.~Komodakis, N.~Paragios, Deformable medical image
+  registration: Setting the state of the art with discrete methods, Annual
+  Review of Biomedical Engineering 13 (2011) 219--244.
+
+\bibitem{SotirasDP13}
+A.~Sotiras, C.~Davatzikos, N.~Paragios, Deformable medical image registration:
+  {A} survey, IEEE Trans. Med. Imaging 32~(7) (2013) 1153--1190.
+
+\bibitem{ourselin_2001}
+S.~Ourselin, A.~Roche, G.~Subsol, X.~Pennec, N.~Ayache, Reconstructing a {3D}
+  structure from serial histological sections, Image and Vision Computing
+  19~(1-2) (2001) 25--31.
+
+\bibitem{JuHisto}
+T.~Ju, J.~Warren, J.~Carson, M.~Bello, I.~Kakadiaris, W.~Chiu, C.~Thaller,
+  G.~Eichele, 3d volume reconstruction of a mouse brain from histological
+  sections using warp filtering, Journal of Neuroscience Methods 156~(1-2)
+  (2006) 84--100.
+
+\bibitem{DercksenAutomatic}
+V.~Dercksen, B.~Weber, D.~Guenther, M.~Oberlaender, S.~P. et~al., Automatic
+  alignment of stacks of filament data, Proc. IEEE Int. Symp. on Biomedical
+  Imaging: From Nano to Macro (ISBI) (2009) 971--974.
+
+\bibitem{besl_1992}
+P.~J. Besl, N.~D. McKay, A method for registration of {3-D} shapes, IEEE Trans.
+  Pattern Anal. Mach. Intell. 14~(2) (1992) 239--256.
+
+\bibitem{chetverikov_2005}
+D.~Chetverikov, D.~Stepanov, P.~Krsek, Robust euclidean alignment of {3D} point
+  sets: the trimmed iterative closest point algorithm, Image and Vision
+  Computing 23~(3) (2005) 299 -- 309.
+
+\bibitem{nishino_2002}
+K.~Nishino, K.~Ikeuchi, Robust simultaneous registration of multiple range
+  images, in: Digitally Archiving Cultural Objects, Springer US, 2008, pp.
+  71--88.
+
+\bibitem{stewart_2002}
+C.~V. Stewart, C.~Tsai, B.~Roysam, The dual-bootstrap iterative closest point
+  algorithm with application to retinal image registration, IEEE Trans. Med.
+  Img 22~(11) (2003) 1379--1394.
+
+\bibitem{kaneko_2003}
+S.~Kaneko, T.~Kondo, A.~Miyamoto, Robust matching of {3D} contours using
+  iterative closest point algorithm improved by m-estimation, Pattern
+  Recognition 36~(9) (2003) 2041--2047.
+
+\bibitem{ma_1999}
+B.~Ma, R.~E. Ellis, D.~J. Fleet, Spotlights: A robust method for surface-based
+  registration in orthopedic surgery, in: MICCAI, 1999, pp. 936--944.
+
+\bibitem{perez_2003}
+P.~P{\'e}rez, M.~Gangnet, A.~Blake, Poisson image editing, in: ACM SIGGRAPH
+  2003 Papers, 2003, pp. 313--318.
+
+\bibitem{raskar_2004}
+R.~Raskar, A.~Ilie, J.~Yu, Image fusion for context enhancement and video
+  surrealism, in: Proc. NPAR 2004, 2004, pp. 85--152.
+
+\bibitem{ferezou_2006}
+I.~Ferezou, S.~Bolea, C.~C.~H. Petersen, {Visualizing the Cortical
+  Representation of Whisker Touch: Voltage-Sensitive Dye Imaging in Freely
+  Moving Mice}, Neuron 50~(4) (2006) 617--629.
+
+\bibitem{Jacob10}
+V.~Jacob, L.~Estebanez, J.~L. Cam, J.-Y. Tiercelin, P.~Parra, G.~Par\'esys,
+  D.~E. Shulz, The matrix: A new tool for probing the whisker-to-barrel system
+  with natural stimuli, Journal of Neuroscience Methods 189~(1) (2010) 65--74.
+
+\bibitem{DiCarlo96}
+J.~J. DiCarlo, J.~W. Lane, S.~S. Hsiao, K.~O. Johnson, Marking microelectrode
+  penetrations with fluorescent dyes, Journal of Neuroscience Methods 64~(1)
+  (1996) 75--81.
+
+\bibitem{Kleinfeld1996}
+D.~Kleinfeld, K.~R.Delaney, Distributed representation of vibrissa movement in
+  the upper layers of somatosensory cortex revealed with voltage-sensitive
+  dyes, J. Comp. Neurol. 375~(1) (1996) 89--108.
+
+\bibitem{Takashima2001}
+I.~T. Takashima~I, Kajiwara~R, Voltage-sensitive dye versus intrinsic signal
+  optical imaging: comparison of optically determined functional maps from rat
+  barrel cortex, Neuroreport 12~(13) (2001) 2889--2894.
+
+\bibitem{Kerr2007}
+J.~N. Kerr, C.~P. {de Kock}, D.~S. Greenberg, R.~M. Bruno, B.~Sakmann,
+  F.Helmchen, Spatial organization of neuronal population responses in layer
+  2/3 of rat barrel cortex, J. Neurosci. 27~(48) (2007) 13316--13328.
+
+\bibitem{Tsytsarev2010}
+V.~Tsytsarev, D.~Pope, E.~Pumbo, A.~Yablonskii, M.~Hofmann, Study of the
+  cortical representation of whisker directional deflection using
+  voltage-sensitive dye optical imaging, Neuroimage 53~(1) (2010) 233--238.
+
+\bibitem{Lustig2013}
+B.~R. Lustig, R.~M. Friedman, J.~E. Winberry, F.~F. Ebner, A.~W. Roe,
+  Voltage-sensitive dye imaging reveals shifting spatiotemporal spread of
+  whisker-induced activity in rat barrel cortex, J. Neurophysiol. 109~(9)
+  (2013) 2382--2392.
+
+\bibitem{Harris2013}
+S.~Harris, M.~Bruyns-Haylett, A.~Kennerley, L.~Boorman, P.~G. Overton, H.~Ma,
+  M.~Zhao, T.~H. Schwartz, J.~Berwick, The effects of focal epileptic activity
+  on regional sensory-evoked neurovascular coupling and postictal modulation of
+  bilateral sensory processing, J. Cereb. Blood Flow Metab. 33~(10) (2013)
+  1595--1604.
+
+\bibitem{Berwick2004}
+J.~Berwick, P.~Redgrave, M.~Jones, N.~Hewson-Stoate, J.~Martindale,
+  D.~Johnston, J.~E. Mayhew, Integration of neural responses originating from
+  different regions of the cortical somatosensory map, Brain. Res. 1030~(2)
+  (2004) 284--293.
+
+\bibitem{Berwick2008}
+J.~Berwick, D.~Johnston, M.~Jones, J.~Martindale, C.~Martin, A.~J. Kennerley,
+  P.~Redgrave, J.~E.~W. Mayhew, Fine detail of neurovascular coupling revealed
+  by spatiotemporal analysis of the hemodynamic response to single whisker
+  stimulation in rat barrel cortex, J. Neurophysiol. 99 (2008) 787--798.
+
+\bibitem{Devonshire2010}
+I.~M. Devonshire, T.~H. Grandy, E.~J. Dommett, S.~A. Greenfield, Effects of
+  urethane anaesthesia on sensory processing in the rat barrel cortex revealed
+  by combined optical imaging and electrophysiology, Eur. J. Neurosci. 32~(5)
+  (2010) 786--797.
+
+\bibitem{Zheng2010}
+Y.~Zheng, D.~Johnston, J.~Berwick, J.~Mayhew, Signal source separation in the
+  analysis of neural activity in brain, Neuroimage 13~(3) (2001) 447--458.
+
+\bibitem{Guy2014}
+J.~Guy, R.~J. Wagener, M.~Mock, J.~F. Staiger, Persistence of functional
+  sensory maps in the absence of cortical layers in the somsatosensory cortex
+  of reeler mice, Cereb Cortex (2014) pii:bhu052.
+
+\bibitem{Wallace2008}
+D.~J. Wallace, B.~Sakmann, Plasticity of representational maps in somatosensory
+  cortex observed by in vivo voltage-sensitive dye imaging, Cereb. Cortex
+  18~(6) (2008) 1361--1373.
+
+\bibitem{Wang2012}
+Q.~Wang, D.~C. Millard, H.~J. Zheng, G.~B. Stanley, Voltage-sensitive dye
+  imaging reveals improved topographic activation of cortex in response to
+  manipulation of thalamic microstimulation parameters, J. Neural. Eng. 9~(2)
+  (2012) 026008.
+
+\bibitem{Yang2013}
+J.~W. Yang, S.~An, J.~J. Sun, V.~Reyes-Puerta, J.~Kindler, T.~Berger, W.~Kilb,
+  H.~J. Luhmann, Thalamic network oscillations synchronize ontogenetic columns
+  in the newborn rat barrel cortex, Cereb. Cortex 23~(6) (2013) 1299--316.
+
+\bibitem{BouazizTP13}
+S.~Bouaziz, A.~Tagliasacchi, M.~Pauly, Sparse iterative closest point, Comput.
+  Graph. Forum 32~(5) (2013) 113--123.
+
+\bibitem{maurer_1996}
+C.~R. Maurer, G.~B. Aboutanos, B.~M. Dawant, R.~J. Maciunas, J.~M. Fitzpatrick,
+  Registration of 3-d images using weighted geometrical features, IEEE Trans
+  Med Imaging 15~(6) (1996) 836--849.
+
+\end{thebibliography}

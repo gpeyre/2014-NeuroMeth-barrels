@@ -1,0 +1,29 @@
+% !TEX root = ../neurosciences-barrels.tex
+
+\section{Feature Detection with Normalized Cross-Cor\-re\-la\-tion}
+\label{app-crosscorrel}
+
+We consider a set of Gaussian templates $\{g_k\}_{k \in \Kk}$, 
+\eq{
+	g_k(x) = \frac{1}{Z_k}\exp\pa{ -\frac{\norm{x}^2}{2 \si_k^2} }
+}
+where $Z_k$ is a constant ensuring a normalization $\sum_x g_k(x)^2 = 1$.
+The standard deviations $\si_k$ are chosen equally spaced in the range $[0,\si_{\max}]$ (note that $\si_k=0$ corresponds to a Dirac, supported on a single pixel). 
+
+Given a template $g_k$, we denote its support as 
+\eq{
+	I_k = \enscond{ x }{ g_k(x) > \eta }
+}
+where $\eta = 10^{-3}$ is a small tolerance threshold. The normalized cross correlation of a section $S$ with the template $g_k$ is then defined as
+\eq{
+	\NCC_k(S)(x) = \frac{ \sum_{y \in I_k} S(x+y) g_k(y)  }{
+		\pa{ \sum_{y \in I_k} S(x+y)^2 }^{1/2}
+	}.
+}
+The normalized cross correlation with the whole set of filters is the maximum of all the correlations
+\eql{\label{eq-ncc-def}
+	\NCC(S)(x) = \umax{k \in \Kk} \NCC_k(S)(x).
+}
+A large value of $\NCC(S)(x)$ indicates that a vessel is likely to be present at pixel $x$. In this case, the value $k=k(x)$ of the maximum appearing in~\eqref{eq-ncc-def}, i.e. such that $\NCC(S)(x) =  \NCC_k(S)(x)$, indicates that the radius of this vessel is approximately $\si_k$.  
+
+% \todo{In the previous definition, the mean was subtracted from the image. This looks weird, no ?}

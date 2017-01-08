@@ -1,0 +1,15 @@
+% !TEX root = ../neurosciences-barrels.tex
+
+\section{Inpainting}
+\label{app-inpainting}
+
+We consider a registered slice $\tilde S_m$ and its associated vessel locations $\Xx_m = \{x_i\}_{i \in I}$. We denote $\tilde x_i = \Tt_m(x_i)$ the registered vessel locations, where the cumulative transform $\Tt_m$ is defined in~\eqref{eq-def-registered-data}. We recall that the cross-correlation minimization (as detailed in~\ref{app-crosscorrel}) outputs at each pixel $x$ the index $k(x)$ of the optimal Gaussian template at this location, which has a radius $\si_{k(x)}$.
+
+We define a mask $\Mask$, which is the set of pixels that are at distance smaller than $\si_{k(x_i)}$ from the point $\tilde x_i$. It is thus a union of disks. Pixels in $\Mask$ should be discarded and inpainted. This is achieved using a quadratic minimization that seeks a smooth interpolation of missing data
+\eql{\label{eq-inpaint}
+	\umin{S} \sum_{x} \norm{\nabla S(x)}^2
+	\text{subject to}
+	\foralls y \notin \Mask, \quad S(x) = S_m(x),
+}
+where $\nabla S$ is a finite difference approximation of the gradient of the image $S$. The solution of~\eqref{eq-inpaint} corresponds to solving a Poisson equation $\Delta S = 0$ on $\Mask$ with Dirichlet boundary conditions given by the constraints. This can be solved using a conjugate gradient method. 
+
